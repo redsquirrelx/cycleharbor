@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "cycleharbor"
+version = "0.9.2"
+description = "Urban bicycle fleet, ride sessions and settlement services"
+requires-python = ">=3.10"
+dependencies = []
+[project.scripts]
+cycleharbor = "cycleharbor.cli:main"
+[tool.setuptools.packages.find]
+where = ["src"]

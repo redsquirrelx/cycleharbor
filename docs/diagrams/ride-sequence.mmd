@@ -1,0 +1,11 @@
+sequenceDiagram
+ participant W as RideWorkflow
+ participant A as RideActivationService
+ participant L as LockGateway
+ participant C as RideCompletionService
+ participant P as PaymentGateway
+ W->>A: start(...)
+ A->>L: unlock(bike_id)
+ W->>C: finish(...)
+ C->>L: lock(bike_id)
+ W->>P: capture(FareQuote)
